@@ -151,3 +151,8 @@ body {
     color: #FFF;
 }
 
+/* RESPONSIVIDADE */
+
+@media(max-width:450px) {
+    
+}
