@@ -46,3 +46,33 @@ body {
     font-size: 32px;
     font-weight: bold;
 }
+
+#correct-answers {
+    font-weight:bold;
+    color: #40B576;
+}
+
+#questions-qty {
+    font-weight: bold;
+    color: yellow;
+}
+
+#restart{
+    background-color: #E78230;
+    color: #FFF;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    width: 180px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#restart:hover {
+    background-color: transparent;
+    border-color: #E78230;
+    color: #E78230;
+}
