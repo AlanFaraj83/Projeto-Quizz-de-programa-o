@@ -71,7 +71,13 @@ const questions = [
         },
       ]
     },
-  ]
+]
 
-  // Substituiçao do quizz para a primeira pergunta
-  
+
+// Substituiçao do quizz para a primeira pergunta
+function init() {
+    // criar a primeira pergunta
+    console.log("Iniciou!");
+}
+
+init();
