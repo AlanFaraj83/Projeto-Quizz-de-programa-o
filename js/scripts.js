@@ -5,7 +5,7 @@ const quizzContainer = document.querySelector("#quizz-container");
 const scoreContainer = document.querySelector("#score-container");
 const letters = ["a","b","c","d"];
 let points = 0;
-let actualQuetion = 0;
+let actualQuestion = 0;
 
 const questions = [
     {
@@ -77,7 +77,29 @@ const questions = [
 // Substituiçao do quizz para a primeira pergunta
 function init() {
     // criar a primeira pergunta
-    console.log("Iniciou!");
+    createQuestion(0);
 }
 
+// Cria uma pergunta
+function createQuestion(i) {
+
+  // Limpar a questão anterior
+  const oldButtons = answersBox.querySelectorAll("button");
+
+  oldButtons.forEach(function(btn) {
+    btn.remove();
+  });
+
+  // Alterar o texto da pergunta
+  const questionText = question.querySelector("#question-text");
+  const questionNumber = question.querySelector("#question-number");
+
+  questionText.textContent = questions[i].question;
+  questionNumber.textContent = i + 1;
+
+}
+
+// Inicialização do Quizz
+
 init();
+
