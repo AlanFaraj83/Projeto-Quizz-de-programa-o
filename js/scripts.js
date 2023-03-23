@@ -109,12 +109,52 @@ function createQuestion(i) {
     letterBtn.textContent = letters[i];
     answerText.textContent= answer['answer'];
 
-    console.log(answerTemplate);
+    answerTemplate.setAttribute("correct-answer", answer["correct"]);
+
+    // Remover hide e template class
+    answerTemplate.classList.remove("hide");
+    answerTemplate.classList.remove("answer-template");
+
+    // Inserir a alternativa na tela
+    answersBox.appendChild(answerTemplate);
+
+    // Inserir um evento de click no botão
+    answerTemplate.addEventListener("click", function() {
+      checkAnswer(this);
+    });
 
   });
 
+  // Incrementar o número da questão 
+  actualQuestion++;
+
 }
 
+// Verificando resposta do usuário
+function checkAnswer(btn) {
+
+  // selecionar todos os botões
+  const buttons = answersBox.querySelectorAll("button");
+
+  // verifica se a resposta está correta e adiciona classes nos botões
+  buttons.forEach(function(button) {
+
+    if(button.getAttribute("correct-answer") === "true") {
+
+      button.classList.add("correct-answer");
+
+      // checa se o usuário acertou a pergunta
+
+    } else {
+
+      button.classList.add("wrong-answer");
+
+    }
+
+  });
+  
+}
+  
 // Inicialização do Quizz
 
 init();
