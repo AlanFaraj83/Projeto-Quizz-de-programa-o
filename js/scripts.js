@@ -144,6 +144,10 @@ function checkAnswer(btn) {
       button.classList.add("correct-answer");
 
       // checa se o usuário acertou a pergunta
+      if(btn === button) {
+        // incremento dos pontos
+        points++;
+      }
 
     } else {
 
@@ -152,7 +156,28 @@ function checkAnswer(btn) {
     }
 
   });
+
+  // Exibir a próxima pergunta
+  nextQuestion();
   
+}
+
+// Exibi a próxima pergunta
+function nextQuestion() {
+
+  // timer para usuário ver as respostas
+  setTimeout(function() {
+
+    // vrifica se ainda há perguntas
+    if(actualQuestion >= questions.length) {
+      // apresenta a msg de sucesso
+
+    }
+
+    createQuestion(actualQuestion);
+
+  }, 1500);
+
 }
   
 // Inicialização do Quizz
