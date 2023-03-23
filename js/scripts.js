@@ -171,12 +171,35 @@ function nextQuestion() {
     // vrifica se ainda há perguntas
     if(actualQuestion >= questions.length) {
       // apresenta a msg de sucesso
+      showSucessMessage();
+      return;
 
     }
 
     createQuestion(actualQuestion);
 
-  }, 1500);
+  }, 700);
+
+}
+
+// Exibe a tela final
+function showSucessMessage() {
+
+  quizzContainer.classList.toggle("hide");
+  scoreContainer.classList.toggle("hide");
+
+  // trocar dados da tela de sucesso
+
+  // calcular o score
+  const score = ((points / questions.length) * 100).toFixed(2);
+
+  const displayScore = document.querySelector("#display-score span");
+
+  displayScore.textContent = score.toString();
+
+  // alterar o número de perguntas corretas
+  const correctAnswers = document.querySelector("#correct-answers");
+  correctAnswers.textContent = points;
 
 }
   
