@@ -71,6 +71,154 @@ const questions = [
         },
       ]
     },
+    {
+      "question": "Qual linguagem de programação de banco de dados?",
+      "answers": [
+        {
+          "answer": "Haskell",
+          "correct": false
+        },
+        {
+          "answer": "Rust",
+          "correct": false
+        },
+        {
+          "answer": "Ruby",
+          "correct": false
+        },
+        {
+          "answer": "SQL",
+          "correct": true
+        },
+      ]
+    },
+    {
+      "question": "Qual foi a primeira linguagem de programação?",
+      "answers": [
+        {
+          "answer": "BASIC",
+          "correct": false
+        },
+        {
+          "answer": "Assembly",
+          "correct": false
+        },
+        {
+          "answer": "Fortran",
+          "correct": true
+        },
+        {
+          "answer": "JavaScript",
+          "correct": false
+        },
+      ]
+    },
+    {
+      "question": "Para que se usa // em programação?",
+      "answers": [
+        {
+          "answer": "Para comentar o código",
+          "correct": true
+        },
+        {
+          "answer": "Para terminar o script",
+          "correct": false
+        },
+        {
+          "answer": "Para fazer uma quebra de linha",
+          "correct": false
+        },
+        {
+          "answer": "Para fazer um print do texto",
+          "correct": false
+        },
+      ]
+    },
+    {
+      "question": "Qual é a linguagem de Marcação de HiperTexto?",
+      "answers": [
+        {
+          "answer": "Elixir",
+          "correct": false
+        },
+        {
+          "answer": "JSON",
+          "correct": false
+        },
+        {
+          "answer": "HTML",
+          "correct": true
+        },
+        {
+          "answer": "jQuery",
+          "correct": false
+        },
+      ]
+    },
+    {
+      "question": "Quando trabalhamos com menus, além de formatar os links, é necessário posicioná-los.Com isso em mente, marque a alternativa que representa os valores que a propriedade ‘position’ pode receber?",
+      "answers": [
+        {
+          "answer": "static, relative, absolute ou fixed",
+          "correct": true
+        },
+        {
+          "answer": "default, relative, absolute ou variable",
+          "correct": false
+        },
+        {
+          "answer": "top, bottom, left, right ou center",
+          "correct": false
+        },
+        {
+          "answer": "public, private, default ou static",
+          "correct": false
+        },
+      ]
+    },
+    {
+      "question": "A forma correta de declarar uma regra CSS é a seguinte: ?",
+      "answers": [
+        {
+          "answer": "seletor{valor>propriedade}",
+          "correct": false
+        },
+        {
+          "answer": "Nenhuma das alternativas",
+          "correct": false
+        },
+        {
+          "answer": "seletor{propriedade: valor;}",
+          "correct": true
+        },
+        {
+          "answer": "seletor{propriedade = valor}",
+          "correct": false
+        },
+      ]
+    },
+    {
+      "question": "Para exibir valores no corpo da página, é preciso usar a função?",
+      "answers": [
+        {
+          "answer": "Nenhuma das alternativas",
+          "correct": false
+        },
+        {
+          "answer": "document.write()",
+          "correct": true
+        },
+        {
+          "answer": "alert()",
+          "correct": false
+        },
+        {
+          "answer": "Windows.open()",
+          "correct": false
+        },
+      ]
+    },
+   
 ]
 
 
@@ -201,8 +349,8 @@ function showSucessMessage() {
   correctAnswers.textContent = points;
 
   // alterar o total de perguntas
-  const totalQuestion = document.querySelector("#question-qty");
-  totalQuestion.textContent = questions.length;
+  const totalQuestions = document.querySelector("#questions-qty");
+  totalQuestions.textContent = questions.length;
 
 }
 
@@ -210,8 +358,23 @@ function showSucessMessage() {
 function hideOrShowQuizz() {
   quizzContainer.classList.toggle("hide");
   scoreContainer.classList.toggle("hide");
-  
+
 }
+
+// Reiniciar Quizz
+const restartBtn = document.querySelector("#restart");
+
+restartBtn.addEventListener("click", function() {
+  
+  // zerar o jogo
+  actualQuestion = 0;
+  points = 0;
+  hideOrShowQuizz();
+  init();
+
+
+
+});
   
 // Inicialização do Quizz
 
