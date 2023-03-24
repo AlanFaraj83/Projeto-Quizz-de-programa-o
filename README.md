@@ -22,9 +22,14 @@
   * JAVASCRIPT
   * DOM
   
-   <h2>Apresentação do projeto</h2>
-   
-   <p align="center">
- <img alt="quizz2" src="" width="100%">
-</p>
+  ### <strong><i>Como clonar o projeto:</i></strong>
+  
+  <p> git clone https://github.com/AlanFaraj83/Projeto-Quizz-de-programacao.git</p>
+
+</br>
+
+## 📝 Licença
+
+Esse projeto está sob a licença MIT.https://github.com/AlanFaraj83/Projeto-Quizz-de-programacao/blob/main/LICENSE para mais detalhes.
+
 
