@@ -12,7 +12,7 @@
 
 ## Descrição do Projeto
 
-<p align="center">Projeto Quizz de programação com objetivo de praticar front-end e DOM com a finalidade de fazer o game de perguntas e respostas na área de programação. </p>
+<p align="center">Projeto Quizz de programação com objetivo de praticar front-end e DOM com finalidade de fazer o game de perguntas e respostas na área de programação. </p>
 
 ## Conteúdo do projeto
 
